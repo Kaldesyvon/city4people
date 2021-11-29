@@ -1,0 +1,12 @@
+{
+  "name": "hackathon-2021",
+  "version": "1.0.0",
+  "description": "application for better management of reported problems of people in city",
+  "main": "index.js",
+  "repository": "git@git.kpi.fei.tuke.sk:martin.novysedlak.2/hackathon-2021.git",
+  "author": "Martin Novysedlak <martin.novysedlak.2@student.tuke.sk>",
+  "license": "MIT",
+  "dependencies": {
+    "react-native": "^0.66.3"
+  }
+}
