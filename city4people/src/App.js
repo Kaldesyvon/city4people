@@ -1,116 +1,35 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 
-import {StyleSheet, Text, View} from 'react-native';
-import Icon from 'react-native-ionicons';
-import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {NativeRouter, Route, Link, Routes} from 'react-router-native';
 
-const Tab = createBottomTabNavigator();
-
-const Map = () => {
-    return (
-        <View>
-
-        </View>
-    );
-};
-
-const Home = () => {
-    return (
-        <View>
-            <Text style={styles.text}>Hello</Text>
-        </View>
-    );
-};
-
-const Profile = () => {
-    return (
-        <View>
-            <Text style={styles.text}>Profile</Text>
-        </View>
-    );
-};
-
-const Info = () => {
-    return (
-        <View>
-            <Text style={styles.text}>Info</Text>
-        </View>
-    );
-}
+import Signin from "./components/Signin";
+import Login from "./components/Login";
+import Navigation from "./components/Navigation";
+import Home from "./components/Home";
+import Info from "./components/Info";
+import Profile from "./components/Profile";
+import Map from "./components/Map";
 
 const App = () => {
     return (
-        <NavigationContainer>
-            <Tab.Navigator
-                screenOptions={{
-                    // tabBarLabel: () => {
-                        // return null;
-                    // },
-                    tabBarStyle: {
-                        height: '11%',
-                        backgroundColor: 'white',
-                        position: 'absolute',
-                        paddingBottom: 15,
-                    },
-                    tabBarActiveTintColor: '#00DB16',
-                    tabBarInactiveTintColor: 'black',
-                }}>
-                <Tab.Screen
-                    name="Home"
-                    component={Home}
-                    options={{
-                        tabBarIcon: ({color, size}) => (
-                            <Icon name="home" color={color} size={size} />
-                        ),
-                    }}
-                />
-                <Tab.Screen
-                    name="Map"
-                    component={Map}
-                    options={{
-                        tabBarIcon: ({color, size}) => (
-                            <Icon name="map" color={color} size={size} />
-                        ),
-                    }}
-                />
-                <Tab.Screen
-                    name="Profile"
-                    component={Profile}
-                    options={{
-                        tabBarIcon: ({color, size}) => (
-                            <Icon name="person" color={color} size={size} />
-                        ),
-                    }}
-                />
-                <Tab.Screen
-                    name="Info"
-                    component={Info}
-                    options={{
-                        tabBarIcon: ({color, size}) => (
-                            <Icon name="information-circle" color={color} size={size}/>
-                        ),
-                    }}
-                />
-            </Tab.Navigator>
-        </NavigationContainer>
+        <NativeRouter>
+            <Routes>
+                <Route path="/Signin" element={<Signin />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Navigation" element={<Navigation />} />
+                <Route path="/Home" element={<Home />} />
+                <Route path="/Info" element={<Info />} />
+                <Route path="/Profile" element={<Profile />} />
+                <Route path="/Map" element={<Map />} />
+                <Route exact path="/" element={<Signin />} />
+                {/*<Route path="/profile" element={<Info/>} />*/}
+            </Routes>
+        </NativeRouter>
     );
 };
 
-const styles = StyleSheet.create({
-    text: {
-        color: 'black',
-    },
-    mapContainer: {
-        height:400,
-        width:400,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-    },
-    map: {
-        ...StyleSheet.absoluteFillObject,
-    },
-});
+
 
 export default App;
