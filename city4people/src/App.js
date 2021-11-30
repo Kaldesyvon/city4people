@@ -4,13 +4,14 @@ import React from 'react';
 
 import {StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-ionicons';
+import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
 const Tab = createBottomTabNavigator();
 
 const Map = () => {
     return (
         <View>
-            <Text style={styles.text}>Map</Text>
+
         </View>
     );
 };
@@ -30,6 +31,14 @@ const Profile = () => {
         </View>
     );
 };
+
+const Info = () => {
+    return (
+        <View>
+            <Text style={styles.text}>Info</Text>
+        </View>
+    );
+}
 
 const App = () => {
     return (
@@ -75,6 +84,15 @@ const App = () => {
                         ),
                     }}
                 />
+                <Tab.Screen
+                    name="Info"
+                    component={Info}
+                    options={{
+                        tabBarIcon: ({color, size}) => (
+                            <Icon name="information-circle" color={color} size={size}/>
+                        ),
+                    }}
+                />
             </Tab.Navigator>
         </NavigationContainer>
     );
@@ -83,6 +101,15 @@ const App = () => {
 const styles = StyleSheet.create({
     text: {
         color: 'black',
+    },
+    mapContainer: {
+        height:400,
+        width:400,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+    map: {
+        ...StyleSheet.absoluteFillObject,
     },
 });
 
