@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import InfoCard from "./InfoCard";
-export default function InfoScreen(){
+export default function Info(){
 
     return(
         <ScrollView >
