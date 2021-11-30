@@ -4,24 +4,12 @@ import React from 'react';
 
 import {StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-ionicons';
-import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import Home from './components/Home';
 
 const Tab = createBottomTabNavigator();
 
 const Map = () => {
-    return (
-        <View>
-
-        </View>
-    );
-};
-
-const Home = () => {
-    return (
-        <View>
-            <Text style={styles.text}>Hello</Text>
-        </View>
-    );
+    return <View></View>;
 };
 
 const Profile = () => {
@@ -38,7 +26,7 @@ const Info = () => {
             <Text style={styles.text}>Info</Text>
         </View>
     );
-}
+};
 
 const App = () => {
     return (
@@ -46,7 +34,7 @@ const App = () => {
             <Tab.Navigator
                 screenOptions={{
                     // tabBarLabel: () => {
-                        // return null;
+                    // return null;
                     // },
                     tabBarStyle: {
                         height: '11%',
@@ -61,6 +49,7 @@ const App = () => {
                     name="Home"
                     component={Home}
                     options={{
+                        headerTitle: 'Tasks',
                         tabBarIcon: ({color, size}) => (
                             <Icon name="home" color={color} size={size} />
                         ),
@@ -89,7 +78,11 @@ const App = () => {
                     component={Info}
                     options={{
                         tabBarIcon: ({color, size}) => (
-                            <Icon name="information-circle" color={color} size={size}/>
+                            <Icon
+                                name="information-circle"
+                                color={color}
+                                size={size}
+                            />
                         ),
                     }}
                 />
@@ -103,8 +96,8 @@ const styles = StyleSheet.create({
         color: 'black',
     },
     mapContainer: {
-        height:400,
-        width:400,
+        height: 400,
+        width: 400,
         justifyContent: 'flex-end',
         alignItems: 'center',
     },
