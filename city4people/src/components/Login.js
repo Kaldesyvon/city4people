@@ -4,7 +4,7 @@ import {Link} from 'react-router-native';
 import {Divider} from 'react-native-elements';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 
-const Login = () => {
+export default function Login () {
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>
             <View style={{flex: 1, alignItems: 'center'}}>

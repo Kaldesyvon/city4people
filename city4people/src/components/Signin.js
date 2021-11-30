@@ -2,25 +2,21 @@ import {Image, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View} fro
 import React from 'react';
 import {Link} from 'react-router-native';
 
-const Signin = () => {
+export default function Signin () {
     return (
         <View style={{flex: 1, flexDirection: 'column', backgroundColor: 'white'}}>
             <View style={{flex: 2}}>
                 <Image
-                    style={styles.logo}
+                    style={Styles.logo}
                     source={require('../assets/images/logo.png')}
                 />
             </View>
+
             <View style={{flex: 2}}>
                 <Link style={styles.button} to={'/Login'}>
                     <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>Login</Text>
                 </Link>
 
-                <TouchableOpacity style={styles.button}>
-                    <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>
-                        Register
-                    </Text>
-                </TouchableOpacity>
             </View>
         </View>
     );

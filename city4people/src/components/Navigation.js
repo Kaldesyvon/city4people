@@ -1,10 +1,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-ionicons';
-
 import Home from "./Home";
 import Info from "./Info";
 import Profile from "./Profile";
@@ -12,8 +9,7 @@ import Map from "./Map";
 
 const Tab = createBottomTabNavigator();
 
-
-const Navigation = () => {
+export default function Navigation () {
     return (
         <NavigationContainer>
             <Tab.Navigator
@@ -68,43 +64,3 @@ const Navigation = () => {
         </NavigationContainer>
     );
 };
-
-const styles = StyleSheet.create({
-    text: {
-        color: 'black',
-    },
-    mapContainer: {
-        height: 400,
-        width: 400,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-    },
-    map: {
-        ...StyleSheet.absoluteFillObject,
-    },
-    logo: {
-        marginTop: 100,
-        // paddingTop: 150,
-        alignSelf: 'center',
-        width: 170,
-        height: 170,
-    },
-    button: {
-        alignItems: 'center',
-        width: 250,
-        height: 55,
-        alignSelf: 'center',
-        marginTop: 35,
-        // padding: 15,
-        paddingTop: 12,
-        backgroundColor: '#1faa00',
-        borderRadius: 50,
-    },
-    buttonText: {
-        color: 'white',
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-});
-
-export default Navigation;
