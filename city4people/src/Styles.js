@@ -1,4 +1,4 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet} from 'react-native';
 
 export let Styles;
 Styles = StyleSheet.create({
@@ -7,7 +7,7 @@ Styles = StyleSheet.create({
     },
 
     textWhite: {
-        color: "white"
+        color: 'white',
     },
 
     mapContainer: {
@@ -29,8 +29,6 @@ Styles = StyleSheet.create({
         height: 50,
         borderRadius: 50,
         backgroundColor: 'white',
-
-
     },
 
     button_container_green: {
@@ -41,8 +39,6 @@ Styles = StyleSheet.create({
         height: 50,
         borderRadius: 50,
         backgroundColor: '#EEEEEE',
-
-
     },
 
     Button_box_white: {
@@ -50,7 +46,6 @@ Styles = StyleSheet.create({
         textAlign: 'center',
         margin: 2,
         fontWeight: 'bold',
-
     },
 
     rep_box: {
@@ -63,14 +58,13 @@ Styles = StyleSheet.create({
         textAlign: 'center',
         margin: 5,
         fontWeight: 'bold',
-        fontSize: 20
-
+        fontSize: 20,
     },
 
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 30
+        margin: 30,
     },
 
     profile_image: {
@@ -80,36 +74,36 @@ Styles = StyleSheet.create({
     },
 
     card: {
-        margin: "5%",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "white",
+        margin: '5%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'white',
         borderRadius: 25,
-        marginBottom: "20%"
+        marginBottom: '20%',
     },
 
     row: {
         flex: 1,
-        flexDirection: "row",
-        backgroundColor: "white",
-        marginVertical: "5%"
+        flexDirection: 'row',
+        backgroundColor: 'white',
+        marginVertical: '5%',
     },
 
     buton: {
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: 'center',
+        justifyContent: 'center',
         borderWidth: 1,
-        borderColor: "lightgray",
+        borderColor: 'lightgray',
         borderEndWidth: 0,
-        backgroundColor: "#1FAA00",
+        backgroundColor: '#1FAA00',
         borderRadius: 25,
         height: 45,
-        marginHorizontal: 20
+        marginHorizontal: 20,
     },
 
     img: {
-        position: "relative",
+        position: 'relative',
         borderRadius: 25,
         width: "100%",
         marginBottom: "5%"
