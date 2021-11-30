@@ -21,31 +21,6 @@ Styles = StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
     },
 
-    logo: {
-        marginTop: 100,
-        alignSelf: 'center',
-        width: 170,
-        height: 170,
-    },
-
-    button: {
-        alignItems: 'center',
-        width: 250,
-        height: 55,
-        alignSelf: 'center',
-        marginTop: 35,
-        // padding: 15,
-        paddingTop: 12,
-        backgroundColor: '#1faa00',
-        borderRadius: 50,
-    },
-
-    buttonText: {
-        color: 'white',
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-
     button_container_white: {
         margin: 20,
         borderColor: 'black',
@@ -130,9 +105,10 @@ Styles = StyleSheet.create({
     img: {
         position: 'relative',
         borderRadius: 25,
-        width: '100%',
-        marginBottom: '5%',
+        width: "100%",
+        marginBottom: "5%"
     },
+
     taskCard: {
         margin: 20,
         backgroundColor: 'white',
@@ -168,5 +144,48 @@ Styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+    },
+    logo: {
+        marginTop: 100,
+        alignSelf: 'center',
+        width: 180,
+        height: 180,
+    },
+    button: {
+        alignItems: 'center',
+        width: 250,
+        height: 55,
+        alignSelf: 'center',
+        marginTop: 40,
+        paddingTop: 12,
+        backgroundColor: '#1faa00',
+        borderRadius: 50,
+    },
+    buttonText: {
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    titleLogin: {
+        fontSize: 36,
+        fontWeight: 'bold',
+        color: '#1faa00',
+    },
+    label: {
+        fontSize: 12,
+        fontWeight: 'bold',
+        color: 'black',
+        paddingTop: 3,
+    },
+    inputBoxText: {
+        fontSize: 16,
+        paddingTop: 5,
+    },
+    inputBox: {
+        height: 60,
+        paddingLeft: 8,
+        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: 'black',
     },
 });
