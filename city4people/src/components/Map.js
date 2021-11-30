@@ -1,10 +1,9 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-
-import {StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
+import {Styles} from "../Styles";
 
-const Map = () => {
+export default function Map () {
 
     const markers = new Array();
     markers.push({key: 0, latitude: 41.303921, longitude: -81.901693});
@@ -14,7 +13,7 @@ const Map = () => {
             <MapView
                 minHeight={400}
                 provider={PROVIDER_GOOGLE}
-                style={styles.map}
+                style={Styles.map}
                 initialRegion={{
                     latitude: 41.303921,
                     longitude: -81.901693,
@@ -31,20 +30,3 @@ const Map = () => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    text: {
-        color: 'black',
-    },
-    mapContainer: {
-        height: 'auto',
-        width: 'auto',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-    },
-    map: {
-        ...StyleSheet.absoluteFillObject,
-    },
-});
-
-export default Map;

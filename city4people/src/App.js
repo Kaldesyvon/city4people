@@ -1,8 +1,5 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {NativeRouter, Route, Link, Routes} from 'react-router-native';
+import {NativeRouter, Route, Routes} from 'react-router-native';
 
 import Signin from "./components/Signin";
 import Login from "./components/Login";
@@ -11,20 +8,23 @@ import Home from "./components/Home";
 import Info from "./components/Info";
 import Profile from "./components/Profile";
 import Map from "./components/Map";
+import Register from "./components/Register";
+import Detail from "./components/Detail";
 
 const App = () => {
     return (
         <NativeRouter>
             <Routes>
-                <Route path="/Signin" element={<Signin />} />
-                <Route path="/Login" element={<Login />} />
-                <Route path="/Navigation" element={<Navigation />} />
-                <Route path="/Home" element={<Home />} />
-                <Route path="/Info" element={<Info />} />
-                <Route path="/Profile" element={<Profile />} />
-                <Route path="/Map" element={<Map />} />
-                <Route exact path="/" element={<Signin />} />
-                {/*<Route path="/profile" element={<Info/>} />*/}
+                <Route path="/signin" element={<Signin/>} />
+                <Route path="/register" element={<Register/>} />
+                <Route path="/login" element={<Login/>} />
+                <Route path="/navigation" element={<Navigation/>} />
+                <Route path="/home" element={<Home/>} />
+                <Route path="/info" element={<Info/>} />
+                <Route path="/profile" element={<Profile/>} />
+                <Route path="/map" element={<Map/>} />
+                <Route path="/detail" element={<Detail/>} />
+                <Route exact path="/" element={<Signin/>} />
             </Routes>
         </NativeRouter>
     );
