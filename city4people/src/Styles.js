@@ -110,52 +110,57 @@ Styles = StyleSheet.create({
 
     bottomNav: {
         flex: 1,
+        backgroundColor: '#EEEEEE'
     },
 
     imageCircle: {
-        width: 157,
-        height: 157,
-        borderRadius: 157 / 2,
+        width: 300,
+        height: 300,
+        borderRadius: 300 / 2,
         backgroundColor: '#00DB16',
         justifyContent: 'center',
         alignItems: 'center',
-        left: '30%',
-        top: '10%'
+        left: '12%',
+        // top: '10%'
     },
 
     buttonContainerWhite: {
         borderColor: 'black',
         borderWidth: 2,
-        width: 150,
+        width: 200,
         height: 50,
         borderRadius: 50,
         backgroundColor: 'white',
-        top: '12%',
-        left: '32%'
+        top: '1%',
+        left: '25%'
     },
 
     buttonContainerGreen: {
         borderColor: '#00DB16',
         borderWidth: 5,
-        width: 220,
-        height: 50,
+        width: 300,
+        height: 80,
         borderRadius: 50,
-        backgroundColor: '#EEEEEE',
-        top: '20%',
-        left: '19%',
+        backgroundColor: 'white',
+        // top: '20%',
+        left: '9%',
         margin: 15
     },
 
     dropDownContainerGreen: {
         borderColor: '#00DB16',
         borderWidth: 5,
-        width: 220,
-        height: 50,
+        width: 300,
+        height: 80,
         borderRadius: 50,
-        backgroundColor: '#EEEEEE',
-        top: '40%',
-        left: '9%',
+        backgroundColor: 'white',
+        // top: '40%',
+        left: '5%',
         margin: 15
+    },
+
+    dropDownStyle: {
+        fontSize: 30
     },
 
     Button_box_white: {
@@ -175,7 +180,7 @@ Styles = StyleSheet.create({
         textAlign: 'center',
         margin: 5,
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 40,
     },
 
     container: {
@@ -186,8 +191,8 @@ Styles = StyleSheet.create({
     },
 
     profile_image: {
-        height: 150,
-        width: 150,
+        height: 250,
+        width: 250,
         alignItems: 'center',
     },
 

@@ -36,19 +36,12 @@ export default function Profile(){
                     <Text style={Styles.rep_box}>Reputation: 2</Text>
                 </View>
 
-                <Link 
-                    style={Styles.buttonContainerGreen}
-                    to={'/upvotes'}>
-                    <Text style={Styles.Button_box_green}>Upvotes</Text>
-                </Link>
-
                 <SelectDropdown
                     defaultButtonText = 'Language'
                     buttonStyle = {Styles.dropDownContainerGreen}
                     buttonTextStyle = {Styles.Button_box_green}
-                    dropdownStyle = {Styles.Button_box_green}
-                    // rowStyle = {Styles.Button_box_green}
-                    rowTextStyle = {Styles.Button_box_green}
+                    rowTextStyle = {Styles.dropDownStyle}
+                    
                     data={countries}
                     onSelect={(selectedItem, index) => {}}
                     buttonTextAfterSelection={(selectedItem, index) => {
@@ -59,6 +52,14 @@ export default function Profile(){
                     }}
 
                 />
+
+
+                <Link 
+                    style={Styles.buttonContainerGreen}
+                    to={'/upvotes'}>
+                    <Text style={Styles.Button_box_green}>Upvotes</Text>
+                </Link>
+
 
                 <TouchableOpacity
                     style={Styles.buttonContainerGreen}>
