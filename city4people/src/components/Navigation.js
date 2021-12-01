@@ -18,8 +18,8 @@ function Navigation(props) {
             <Link style={Styles.navButton} to={'/home'}>
                 <Icon name={'home'} color={getActiveTab('home')} />
             </Link>
-            <Link style={Styles.navButton} to={'/home'}>
-                <Icon name={'flag'} color={getActiveTab('issue')} />
+            <Link style={Styles.navButton} to={'/activity'}>
+                <Icon name={'flag'} color={getActiveTab('activity')} />
             </Link>
             <Link style={Styles.navButton} to={'/map'}>
                 <Icon name={'map'} color={getActiveTab('map')} />

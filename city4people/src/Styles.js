@@ -226,7 +226,7 @@ Styles = StyleSheet.create({
         width: 340,
     },
     marginButton: {
-        marginLeft: '15%',
+        // marginLeft: '15%',
     },
     navBar: {
         flexDirection: 'row',
