@@ -27,6 +27,7 @@ const Home = ({navigation}) => {
     return (
         <>
             <TouchableOpacity
+                activeOpacity={1}
                 style={{
                     borderWidth: 4,
                     backgroundColor: 'white',
@@ -54,7 +55,10 @@ const Home = ({navigation}) => {
                 }}>
                 {taskList.map(task => {
                     return (
-                        <View key={task.id} style={Styles.taskCard}>
+                        <View
+                            elevation={5}
+                            key={task.id}
+                            style={Styles.taskCard}>
                             <Image
                                 resizeMode="cover"
                                 style={Styles.taskImage}
@@ -106,6 +110,7 @@ const Home = ({navigation}) => {
                                     </View>
                                 </View>
                                 <TouchableOpacity
+                                    activeOpacity={1}
                                     onPress={() => handlePressDetail(task.id)}
                                     style={Styles.outerbutton}>
                                     <View style={Styles.innerButton}>

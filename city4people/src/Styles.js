@@ -21,6 +21,15 @@ Styles = StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
     },
 
+    imageCircle: {
+        width: 157,
+        height: 157,
+        borderRadius: 157 / 2,
+        backgroundColor: '#00DB16',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
     button_container_white: {
         margin: 20,
         borderColor: 'black',
@@ -113,7 +122,15 @@ Styles = StyleSheet.create({
         margin: 20,
         backgroundColor: 'white',
         borderRadius: 25,
+        shadowColor: 'green',
+        shadowOffset: {
+            width: 1,
+            height: 3,
+        },
+        shadowRadius: 5,
+        shadowOpacity: 1.0,
     },
+
     taskImage: {
         width: 320,
         height: 160,
@@ -196,6 +213,13 @@ Styles = StyleSheet.create({
         borderRadius: 25,
         marginTop: 20,
         marginBottom: 20,
+        shadowColor: 'green',
+        shadowOffset: {
+            width: 1,
+            height: 3,
+        },
+        shadowRadius: 5,
+        shadowOpacity: 1.0,
     },
     image1: {
         height: 200,

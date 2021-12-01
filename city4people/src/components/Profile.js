@@ -8,7 +8,7 @@ export default function Profile(){
 
         <View style={Styles.container}>
 
-            <View>
+            <View style = {Styles.imageCircle}>
                 <Image source={require('../assets/images/man-modified.png')} style={Styles.profile_image}/>
             </View>
 
