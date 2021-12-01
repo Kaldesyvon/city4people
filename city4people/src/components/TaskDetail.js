@@ -115,7 +115,6 @@ const TaskDetail = ({route}) => {
                         display: 'flex',
                         flexDirection: 'row',
                         justifyContent: 'center',
-                        justifyContent: 'center',
                         marginBottom: 16,
                     }}>
                     <TouchableOpacity
