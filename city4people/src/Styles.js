@@ -21,6 +21,25 @@ Styles = StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
     },
 
+    topBox: {
+        width: '100%',
+        height: 70,
+        backgroundColor: 'white',
+        flexDirection: 'row',
+
+    },
+
+    topText: {
+        color: "#00DB16",
+        left: '140%',
+
+        fontSize: 50
+    },
+
+    bottomNav: {
+        flex: 1,
+    },
+
     imageCircle: {
         width: 157,
         height: 157,
@@ -28,26 +47,31 @@ Styles = StyleSheet.create({
         backgroundColor: '#00DB16',
         justifyContent: 'center',
         alignItems: 'center',
+        left: '30%',
+        top: '10%'
     },
 
-    button_container_white: {
-        margin: 20,
+    buttonContainerWhite: {
         borderColor: 'black',
         borderWidth: 2,
         width: 150,
         height: 50,
         borderRadius: 50,
         backgroundColor: 'white',
+        top: '12%',
+        left: '32%'
     },
 
-    button_container_green: {
-        margin: 20,
+    buttonContainerGreen: {
         borderColor: '#00DB16',
         borderWidth: 5,
         width: 220,
         height: 50,
         borderRadius: 50,
         backgroundColor: '#EEEEEE',
+        top: '20%',
+        left: '19%',
+        margin: 15
     },
 
     Button_box_white: {
@@ -74,6 +98,7 @@ Styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         margin: 30,
+        flex: 1
     },
 
     profile_image: {
@@ -234,11 +259,15 @@ Styles = StyleSheet.create({
         bottom: 0,
         height: '10%',
         width: '100%',
-        justifyContent: 'space-evenly',
+        // justifyContent: 'space-evenly',
         backgroundColor: 'white',
         // alignSelf: 'center'
     },
     navButton: {
         justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        width: '20%',
+        height: '100%'
     },
 });
