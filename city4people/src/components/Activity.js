@@ -6,17 +6,17 @@ import Icon from 'react-native-ionicons';
 import {Styles} from '../Styles';
 import Navigation from './Navigation';
 
-const Home = () => {
-    const [taskList, setTaskList] = useState([]);
+const Activity = () => {
+    const [activityList, setActivityList] = useState([]);
 
-    const fetchTaskList = async () => {
-        const response = await getAxios().get('tasks');
+    const fetchActivityList = async () => {
+        const response = await getAxios().get('activities');
 
-        setTaskList(response.data);
+        setActivityList(response.data);
     };
 
     useEffect(() => {
-        fetchTaskList();
+        fetchActivityList();
     }, []);
 
     return (
@@ -28,27 +28,29 @@ const Home = () => {
                     backgroundColor: '#EEEEEE',
                     display: 'flex',
                     flex: 0,
-                    marginBottom: 75,
+                    marginBottom: 74,
                 }}>
-                {taskList.map(task => {
+                {activityList.map(activity => {
                     return (
                         <View
                             elevation={5}
-                            key={task.id}
+                            key={activity.id}
                             style={Styles.taskCard}>
                             <Image
                                 resizeMode="cover"
                                 style={Styles.taskImage}
                                 source={{
-                                    uri: task.photo,
+                                    uri: activity.photo,
                                 }}
                             />
 
                             <View style={Styles.textContainer}>
                                 <Text style={{fontSize: 12}}>
-                                    Published {task.published}
+                                    Published {activity.published}
                                 </Text>
-                                <Text style={Styles.title}>{task.title}</Text>
+                                <Text style={Styles.title}>
+                                    {activity.title}
+                                </Text>
                                 <View
                                     style={{
                                         display: 'flex',
@@ -66,7 +68,7 @@ const Home = () => {
                                                 fontSize: 16,
                                             }}>
                                             Priority:{' '}
-                                            {'!'.repeat(task.priority)}
+                                            {'!'.repeat(activity.priority)}
                                         </Text>
                                     </View>
                                     <View
@@ -82,12 +84,12 @@ const Home = () => {
                                                 fontSize: 16,
                                                 paddingLeft: 8,
                                             }}>
-                                            {task.location}
+                                            {activity.location}
                                         </Text>
                                     </View>
                                 </View>
                                 <Link
-                                    to={`/taskdetail/:${task.id}`}
+                                    to={`/activitydetail/:${activity.id}`}
                                     style={Styles.outerbutton}>
                                     <View style={Styles.innerButton}>
                                         <Text
@@ -126,28 +128,9 @@ const Home = () => {
                     <Icon name="add" style={{color: '#1faa00'}} size={50} />
                 </Link>
             </ScrollView>
-            <Link
-                to={'/addtask'}
-                activeOpacity={1}
-                style={{
-                    borderWidth: 4,
-                    backgroundColor: 'white',
-                    borderColor: '#1faa00',
-                    position: 'absolute',
-                    width: 70,
-                    height: 70,
-                    bottom: 110,
-                    right: 30,
-                    zIndex: 10,
-                    borderRadius: 50,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}>
-                <Icon name="add" style={{color: '#1faa00'}} size={50} />
-            </Link>
-            <Navigation activeTab={'home'}></Navigation>
+            <Navigation activeTab={'activity'}></Navigation>
         </>
     );
 };
 
-export default Home;
+export default Activity;

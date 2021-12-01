@@ -7,14 +7,14 @@ import {black} from 'react-native-paper/lib/typescript/styles/colors';
 import {useParams} from 'react-router';
 import Navigation from './Navigation';
 
-const TaskDetail = () => {
+const ActivityDetail = () => {
     const {id} = useParams();
 
     const [task, setTask] = useState();
 
     const fetchTask = async () => {
         const newId = id.slice(1);
-        const response = await getAxios().get(`task/${newId}`);
+        const response = await getAxios().get(`activity/${newId}`);
         setTask(response.data);
     };
 
@@ -159,4 +159,4 @@ const TaskDetail = () => {
     );
 };
 
-export default TaskDetail;
+export default ActivityDetail;
