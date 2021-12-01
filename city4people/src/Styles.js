@@ -21,24 +21,57 @@ Styles = StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
     },
 
-    button_container_white: {
-        margin: 20,
+    topBox: {
+        width: '100%',
+        height: 70,
+        backgroundColor: 'white',
+        flexDirection: 'row',
+
+    },
+
+    topText: {
+        color: "#00DB16",
+        left: '140%',
+
+        fontSize: 50
+    },
+
+    bottomNav: {
+        flex: 1,
+    },
+
+    imageCircle: {
+        width: 157,
+        height: 157,
+        borderRadius: 157 / 2,
+        backgroundColor: '#00DB16',
+        justifyContent: 'center',
+        alignItems: 'center',
+        left: '30%',
+        top: '10%'
+    },
+
+    buttonContainerWhite: {
         borderColor: 'black',
         borderWidth: 2,
         width: 150,
         height: 50,
         borderRadius: 50,
         backgroundColor: 'white',
+        top: '12%',
+        left: '32%'
     },
 
-    button_container_green: {
-        margin: 20,
+    buttonContainerGreen: {
         borderColor: '#00DB16',
         borderWidth: 5,
         width: 220,
         height: 50,
         borderRadius: 50,
         backgroundColor: '#EEEEEE',
+        top: '20%',
+        left: '19%',
+        margin: 15
     },
 
     Button_box_white: {
@@ -65,6 +98,7 @@ Styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         margin: 30,
+        flex: 1
     },
 
     profile_image: {
@@ -113,7 +147,15 @@ Styles = StyleSheet.create({
         margin: 20,
         backgroundColor: 'white',
         borderRadius: 25,
+        shadowColor: 'green',
+        shadowOffset: {
+            width: 1,
+            height: 3,
+        },
+        shadowRadius: 5,
+        shadowOpacity: 1.0,
     },
+
     taskImage: {
         width: 320,
         height: 160,
@@ -196,6 +238,13 @@ Styles = StyleSheet.create({
         borderRadius: 25,
         marginTop: 20,
         marginBottom: 20,
+        shadowColor: 'green',
+        shadowOffset: {
+            width: 1,
+            height: 3,
+        },
+        shadowRadius: 5,
+        shadowOpacity: 1.0,
     },
     image1: {
         height: 200,

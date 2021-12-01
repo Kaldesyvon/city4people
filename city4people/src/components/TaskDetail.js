@@ -28,7 +28,7 @@ const TaskDetail = ({route}) => {
         <ScrollView
             alignItems="center"
             style={{marginBottom: 75, display: 'flex'}}>
-            <View style={Styles.detailCointainer}>
+            <View elevation={5} style={Styles.detailCointainer}>
                 <Text style={{marginLeft: 16, marginTop: 16, fontSize: 12}}>
                     Published {task.published}
                 </Text>
@@ -115,10 +115,11 @@ const TaskDetail = ({route}) => {
                         display: 'flex',
                         flexDirection: 'row',
                         justifyContent: 'center',
-                        justifyContent: 'center',
                         marginBottom: 16,
                     }}>
-                    <TouchableOpacity style={Styles.outerbutton}>
+                    <TouchableOpacity
+                        activeOpacity={1}
+                        style={Styles.outerbutton}>
                         <View>
                             <Text
                                 style={{
@@ -130,6 +131,7 @@ const TaskDetail = ({route}) => {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
+                        activeOpacity={1}
                         style={[Styles.outerbutton, Styles.marginButton]}>
                         <View>
                             <Text

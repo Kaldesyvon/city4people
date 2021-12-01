@@ -9,7 +9,7 @@ import Info from "./components/Info";
 import Profile from "./components/Profile";
 import Map from "./components/Map";
 import Register from "./components/Register";
-import Detail from "./components/Detail";
+import InfoDetail from "./components/InfoDetail";
 
 const App = () => {
     return (
@@ -21,6 +21,7 @@ const App = () => {
                 <Route path="/navigation" element={<Navigation/>} />
                 <Route path="/home" element={<Home/>} />
                 <Route path="/info" element={<Info/>} />
+                <Route path="/info/:id" element={<InfoDetail/>} />
                 <Route path="/profile" element={<Profile/>} />
                 <Route path="/map" element={<Map/>} />
                 <Route path="/map/metals" element={<Map material={'metals'}/>} />
