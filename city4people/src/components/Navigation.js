@@ -19,10 +19,12 @@ function Navigation(props) {
                     <Text style={{color: `${getActiveTab('home')}`}}>Home</Text>
                 </View>
             </Link>
-            <Link style={Styles.navButton} to={'/home'}>
+            <Link style={Styles.navButton} to={'/activity'}>
                 <View style={{alignItems: 'center'}}>
-                    <Icon name={'flag'} color={getActiveTab('flag')} />
-                    <Text style={{color: `${getActiveTab('flag')}`}}>Works</Text>
+                    <Icon name={'flag'} color={getActiveTab('activity')} />
+                    <Text style={{color: `${getActiveTab('activity')}`}}>
+                        Works
+                    </Text>
                 </View>
             </Link>
             <Link style={Styles.navButton} to={'/map'}>
@@ -34,12 +36,17 @@ function Navigation(props) {
             <Link style={Styles.navButton} to={'/profile'}>
                 <View style={{alignItems: 'center'}}>
                     <Icon name={'person'} color={getActiveTab('profile')} />
-                    <Text style={{color: `${getActiveTab('profile')}`}}>Profile</Text>
+                    <Text style={{color: `${getActiveTab('profile')}`}}>
+                        Profile
+                    </Text>
                 </View>
             </Link>
             <Link style={Styles.navButton} to={'/info'}>
                 <View style={{alignItems: 'center'}}>
-                    <Icon name={'information-circle'} color={getActiveTab('info')} />
+                    <Icon
+                        name={'information-circle'}
+                        color={getActiveTab('info')}
+                    />
                     <Text style={{color: `${getActiveTab('info')}`}}>Info</Text>
                 </View>
             </Link>
