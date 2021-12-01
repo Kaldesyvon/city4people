@@ -1,32 +1,48 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
+
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
-import {Styles} from "../Styles";
+import getAxios from '../api/getAxios';
+import {Styles} from '../Styles';
+import Navigation from './Navigation';
 
-export default function Map () {
+export default function Map(props) {
+    const material = props.material;
 
-    const markers = new Array();
-    markers.push({key: 0, latitude: 41.303921, longitude: -81.901693});
+    const [markers, setMarkers] = useState([]);
+
+    console.debug(props)
+
+    const fetchMarkers = async () => {
+        const response = await getAxios()
+        .get(`/${material}`)
+        .catch(error => console.error(error));
+
+        setMarkers(response.data);
+    };
+
+    useEffect(() => {
+        fetchMarkers();
+    }, [material]);
 
     return (
-        <View style={{height:'89%'}}>
+        <View style={{height: '100%'}}>
             <MapView
                 minHeight={400}
                 provider={PROVIDER_GOOGLE}
                 style={Styles.map}
                 initialRegion={{
-                    latitude: 41.303921,
-                    longitude: -81.901693,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121,
+                    latitude: 48.72,
+                    longitude: 21.258056,
+                    latitudeDelta: 0.1,
+                    longitudeDelta: 0.1,
                 }}
                 showsUserLocation={true}>
-                    {markers.map((marker) => {
-                         return(
-                            <Marker key={marker.key} coordinate={marker}/>
-                        )
-                    })}
+                {markers.map(marker => {
+                    return <Marker key={marker.id} coordinate={marker} />;
+                })}
             </MapView>
+            <Navigation activeTab={'map'}></Navigation>
         </View>
     );
-};
+}

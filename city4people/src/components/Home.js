@@ -3,6 +3,7 @@ import {View, Image, Text, ScrollView, TouchableOpacity} from 'react-native';
 import getAxios from '../api/getAxios';
 import Icon from 'react-native-ionicons';
 import {Styles} from '../Styles';
+import Navigation from './Navigation';
 
 const Home = ({navigation}) => {
     const [taskList, setTaskList] = useState([]);
@@ -131,6 +132,7 @@ const Home = ({navigation}) => {
                     );
                 })}
             </ScrollView>
+            <Navigation activeTab={'home'}></Navigation>
         </>
     );
 };

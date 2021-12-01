@@ -1,6 +1,7 @@
 import {Text, View, TouchableOpacity, Image} from "react-native";
 import React from "react";
 import {Styles} from "../Styles";
+import Navigation from "./Navigation";
 
 export default function Profile(){
     return (
@@ -32,6 +33,8 @@ export default function Profile(){
                 <Text style={Styles.Button_box_green}>About</Text>
             </TouchableOpacity>
 
+            <Navigation activeTab='profile'>
+            </Navigation>
         </View>
     )
 }

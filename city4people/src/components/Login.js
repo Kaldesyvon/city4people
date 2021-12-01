@@ -24,7 +24,7 @@ const Login = () => {
                 </View>
             </View>
             <View style={{flex: 1}}>
-                <Link style={Styles.button} to={'/Navigation'}>
+                <Link style={Styles.button} to={'/Home'}>
                     <Text style={Styles.buttonText}>Login</Text>
                 </Link>
                 <Divider style={{marginTop: 45, width: 250, alignSelf: 'center'}} width={2}/>

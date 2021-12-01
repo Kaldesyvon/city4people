@@ -228,4 +228,17 @@ Styles = StyleSheet.create({
     marginButton: {
         marginLeft: '15%',
     },
+    navBar: {
+        flexDirection: 'row',
+        position: 'absolute',
+        bottom: 0,
+        height: '10%',
+        width: '100%',
+        justifyContent: 'space-evenly',
+        backgroundColor: 'white',
+        // alignSelf: 'center'
+    },
+    navButton: {
+        justifyContent: 'center',
+    },
 });
