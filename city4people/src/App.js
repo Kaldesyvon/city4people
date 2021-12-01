@@ -24,6 +24,10 @@ const App = () => {
                 <Route path="/info/:id" element={<InfoDetail/>} />
                 <Route path="/profile" element={<Profile/>} />
                 <Route path="/map" element={<Map/>} />
+                <Route path="/map/metals" element={<Map material={'metals'}/>} />
+                <Route path="/map/papers" element={<Map material={'papers'}/>} />
+                <Route path="/map/tetrapacks" element={<Map material={'tetrapacks'}/>} />
+                <Route path="/map/glass" element={<Map material={'glass'}/>} />
                 <Route path="/detail" element={<InfoDetail/>} />
                 <Route exact path="/" element={<Signin/>} />
             </Routes>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-ionicons';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import {Link} from 'react-router-native';
 import {Styles} from '../Styles';
 
@@ -8,30 +8,40 @@ function Navigation(props) {
     const activeTab = props.activeTab;
 
     const getActiveTab = name => {
-        return activeTab == name ? 'black' : '#00DB16';
+        return activeTab !== name ? 'black' : '#00DB16';
     };
-
-    console.log(props);
 
     return (
         <View style={Styles.navBar}>
             <Link style={Styles.navButton} to={'/home'}>
-                <Icon name={'home'} color={getActiveTab('home')} />
+                <View style={{alignItems: 'center'}}>
+                    <Icon name={'home'} color={getActiveTab('home')} />
+                    <Text style={{color: `${getActiveTab('home')}`}}>Home</Text>
+                </View>
             </Link>
             <Link style={Styles.navButton} to={'/home'}>
-                <Icon name={'flag'} color={getActiveTab('issue')} />
+                <View style={{alignItems: 'center'}}>
+                    <Icon name={'flag'} color={getActiveTab('flag')} />
+                    <Text style={{color: `${getActiveTab('flag')}`}}>Works</Text>
+                </View>
             </Link>
             <Link style={Styles.navButton} to={'/map'}>
-                <Icon name={'map'} color={getActiveTab('map')} />
+                <View style={{alignItems: 'center'}}>
+                    <Icon name={'map'} color={getActiveTab('map')} />
+                    <Text style={{color: `${getActiveTab('map')}`}}>Map</Text>
+                </View>
             </Link>
             <Link style={Styles.navButton} to={'/profile'}>
-                <Icon name={'person'} color={getActiveTab('profile')} />
+                <View style={{alignItems: 'center'}}>
+                    <Icon name={'person'} color={getActiveTab('profile')} />
+                    <Text style={{color: `${getActiveTab('profile')}`}}>Profile</Text>
+                </View>
             </Link>
             <Link style={Styles.navButton} to={'/info'}>
-                <Icon
-                    name={'information-circle'}
-                    color={getActiveTab('info')}
-                />
+                <View style={{alignItems: 'center'}}>
+                    <Icon name={'information-circle'} color={getActiveTab('info')} />
+                    <Text style={{color: `${getActiveTab('info')}`}}>Info</Text>
+                </View>
             </Link>
         </View>
     );

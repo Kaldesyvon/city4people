@@ -259,11 +259,15 @@ Styles = StyleSheet.create({
         bottom: 0,
         height: '10%',
         width: '100%',
-        justifyContent: 'space-evenly',
+        // justifyContent: 'space-evenly',
         backgroundColor: 'white',
         // alignSelf: 'center'
     },
     navButton: {
         justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        width: '20%',
+        height: '100%'
     },
 });
