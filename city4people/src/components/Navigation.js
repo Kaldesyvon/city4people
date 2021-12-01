@@ -14,8 +14,12 @@ const TaskStack = createNativeStackNavigator();
 
 const TaskNavigator = () => {
     return (
-        <TaskStack.Navigator>
-            <TaskStack.Screen name="TaskList" component={Home} />
+        <TaskStack.Navigator
+            screenOptions={{
+                headerTitleAlign: 'center',
+                headerTitleStyle: {},
+            }}>
+            <TaskStack.Screen name="Tasks" component={Home} />
             <TaskStack.Screen name="TaskDetail" component={TaskDetail} />
         </TaskStack.Navigator>
     );
@@ -26,6 +30,12 @@ const Navigation = () => {
         <NavigationContainer>
             <Tab.Navigator
                 screenOptions={{
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                        color: '#1faa00',
+                        fontSize: 24,
+                    },
+                    headerTitleAlign: 'center',
                     tabBarStyle: {
                         height: '11%',
                         backgroundColor: 'white',
