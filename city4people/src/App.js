@@ -27,7 +27,7 @@ const App = () => {
                 <Route path="/map/papers" element={<Map material={'papers'}/>} />
                 <Route path="/map/tetrapacks" element={<Map material={'tetrapacks'}/>} />
                 <Route path="/map/glass" element={<Map material={'glass'}/>} />
-                <Route path="/detail" element={<Detail/>} />
+                <Route path="/detail" element={<InfoDetail/>} />
                 <Route exact path="/" element={<Signin/>} />
             </Routes>
         </NativeRouter>
