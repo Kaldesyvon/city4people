@@ -21,7 +21,12 @@ export default function Info(){
 
     return(
         <>
-            <ScrollView >
+            <ScrollView style={{
+                    backgroundColor: '#EEEEEE',
+                    display: 'flex',
+                    flex: 0,
+                    marginBottom: 75,
+                }}>
                 {infoList.map(info =>
 
                     <InfoCard style={{flex: 1}}
@@ -34,7 +39,7 @@ export default function Info(){
             </ScrollView>
             <Navigation
                 style = {Styles.bottomNav}
-                activeTab='profile'>
+                activeTab='info'>
             </Navigation>
         </>
     )
