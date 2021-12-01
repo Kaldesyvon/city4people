@@ -7,22 +7,23 @@ import {Styles} from '../Styles';
 import Navigation from './Navigation';
 
 export default function Map(props) {
-    const material = props.material;
+    let material = '';
 
     const [markers, setMarkers] = useState([]);
 
-    console.debug(props)
-
     const fetchMarkers = async () => {
         const response = await getAxios()
-        .get(`/${material}`)
-        .catch(error => console.error(error));
+            .get(`/${material}`)
+            .catch(error => console.error(error));
 
         setMarkers(response.data);
     };
 
     useEffect(() => {
-        fetchMarkers();
+        if (JSON.stringify(props) !== '{}') {
+            material = props.material;
+            fetchMarkers();
+        }
     }, [material]);
 
     return (
