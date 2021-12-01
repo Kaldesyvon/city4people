@@ -105,8 +105,8 @@ Styles = StyleSheet.create({
     img: {
         position: 'relative',
         borderRadius: 25,
-        width: "100%",
-        marginBottom: "5%"
+        width: '100%',
+        marginBottom: '5%',
     },
 
     taskCard: {
@@ -117,7 +117,8 @@ Styles = StyleSheet.create({
     taskImage: {
         width: 320,
         height: 160,
-        borderRadius: 25,
+        borderTopRightRadius: 25,
+        borderTopLeftRadius: 25,
     },
     textContainer: {
         margin: 16,
