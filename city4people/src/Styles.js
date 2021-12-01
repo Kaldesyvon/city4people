@@ -21,6 +21,78 @@ Styles = StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
     },
 
+    heading: {
+        fontSize: 18,
+        fontWeight: '600',
+        margin: 10
+        // marginBottom: 13,
+    },
+
+    subHeading:{
+        fontSize: 15,
+        margin: 10
+        // marginBottom: 13,
+    },
+
+    Upvotecard: {
+        margin: '5%',
+        backgroundColor: 'white',
+        borderRadius: 25,
+        left: '10%',
+        height: 150,
+        width: '70%'
+        // marginBottom: '20%',
+    },
+
+    elevationGreen: {
+        elevation: 20,
+        shadowColor: 'green',
+    },
+
+    elevationRed: {
+        elevation: 20,
+        shadowColor: 'red',
+    },
+
+    upvoteCardRed: {
+        margin: 20,
+        backgroundColor: 'white',
+        borderRadius: 25,
+        borderColor: 'red',
+        borderWidth: 2
+
+    },
+
+    upvoteCardGreen: {
+        margin: 20,
+        backgroundColor: 'white',
+        borderRadius: 25,
+        borderColor: 'green',
+        borderWidth: 2,
+    },
+
+    shadowProp: {
+        shadowColor: '#171717',
+        shadowOffset: {width: -2, height: 4},
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+    },
+
+    upvoteLocation: {
+        margin: 10,
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        // alignItems: 'center',
+    },
+
+    upvotesTitle: {
+        color: 'black',
+        margin: 5,
+        fontWeight: 'bold',
+        fontSize: 20,
+    },
+
+
     topBox: {
         width: '100%',
         height: 70,
@@ -71,6 +143,18 @@ Styles = StyleSheet.create({
         backgroundColor: '#EEEEEE',
         top: '20%',
         left: '19%',
+        margin: 15
+    },
+
+    dropDownContainerGreen: {
+        borderColor: '#00DB16',
+        borderWidth: 5,
+        width: 220,
+        height: 50,
+        borderRadius: 50,
+        backgroundColor: '#EEEEEE',
+        top: '40%',
+        left: '9%',
         margin: 15
     },
 

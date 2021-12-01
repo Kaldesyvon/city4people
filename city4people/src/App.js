@@ -10,6 +10,7 @@ import Profile from "./components/Profile";
 import Map from "./components/Map";
 import Register from "./components/Register";
 import InfoDetail from "./components/InfoDetail";
+import Upvotes from './components/Upvotes';
 
 const App = () => {
     return (
@@ -30,6 +31,7 @@ const App = () => {
                 <Route path="/map/glass" element={<Map material={'glass'}/>} />
                 <Route path="/detail" element={<InfoDetail/>} />
                 <Route exact path="/" element={<Signin/>} />
+                <Route path="/upvotes" element={<Upvotes/>} />
             </Routes>
         </NativeRouter>
     );
