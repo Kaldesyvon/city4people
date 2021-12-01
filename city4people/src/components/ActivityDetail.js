@@ -154,7 +154,7 @@ const ActivityDetail = () => {
                     </View>
                 </View>
             </ScrollView>
-            <Navigation activeTab={'home'}></Navigation>
+            <Navigation activeTab={'activity'}></Navigation>
         </>
     );
 };
