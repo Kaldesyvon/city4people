@@ -189,4 +189,19 @@ Styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'black',
     },
+    detailCointainer: {
+        backgroundColor: 'white',
+        width: '80%',
+        flex: 0,
+        borderRadius: 25,
+        marginTop: 20,
+        marginBottom: 20,
+    },
+    image1: {
+        height: 200,
+        width: 340,
+    },
+    marginButton: {
+        marginLeft: '15%',
+    },
 });

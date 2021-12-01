@@ -1,20 +1,31 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import Icon from 'react-native-ionicons';
-import Home from "./Home";
-import Info from "./Info";
-import Profile from "./Profile";
-import Map from "./Map";
+import Home from './Home';
+import Info from './Info';
+import Profile from './Profile';
+import Map from './Map';
+import TaskDetail from './TaskDetail';
 
 const Tab = createBottomTabNavigator();
+const TaskStack = createNativeStackNavigator();
 
-export default function Navigation () {
+const TaskNavigator = () => {
+    return (
+        <TaskStack.Navigator>
+            <TaskStack.Screen name="TaskList" component={Home} />
+            <TaskStack.Screen name="TaskDetail" component={TaskDetail} />
+        </TaskStack.Navigator>
+    );
+};
+
+const Navigation = () => {
     return (
         <NavigationContainer>
             <Tab.Navigator
                 screenOptions={{
-
                     tabBarStyle: {
                         height: '11%',
                         backgroundColor: 'white',
@@ -26,7 +37,7 @@ export default function Navigation () {
                 }}>
                 <Tab.Screen
                     name="Home"
-                    component={Home}
+                    component={TaskNavigator}
                     options={{
                         tabBarIcon: ({color, size}) => (
                             <Icon name="home" color={color} size={size} />
@@ -56,7 +67,11 @@ export default function Navigation () {
                     component={Info}
                     options={{
                         tabBarIcon: ({color, size}) => (
-                            <Icon name="information-circle" color={color} size={size}/>
+                            <Icon
+                                name="information-circle"
+                                color={color}
+                                size={size}
+                            />
                         ),
                     }}
                 />
@@ -64,3 +79,5 @@ export default function Navigation () {
         </NavigationContainer>
     );
 };
+
+export default Navigation;

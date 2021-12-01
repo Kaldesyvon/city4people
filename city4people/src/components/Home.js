@@ -4,7 +4,7 @@ import getAxios from '../api/getAxios';
 import Icon from 'react-native-ionicons';
 import {Styles} from '../Styles';
 
-const Home = () => {
+const Home = ({navigation}) => {
     const [taskList, setTaskList] = useState([]);
 
     const fetchTaskList = async () => {
@@ -16,6 +16,12 @@ const Home = () => {
     useEffect(() => {
         fetchTaskList();
     }, []);
+
+    const handlePressDetail = taskId => {
+        navigation.navigate('TaskDetail', {
+            id: taskId,
+        });
+    };
 
     return (
         <>
@@ -98,7 +104,9 @@ const Home = () => {
                                         </Text>
                                     </View>
                                 </View>
-                                <TouchableOpacity style={Styles.outerbutton}>
+                                <TouchableOpacity
+                                    onPress={() => handlePressDetail(task.id)}
+                                    style={Styles.outerbutton}>
                                     <View style={Styles.innerButton}>
                                         <Text
                                             style={{
