@@ -17,7 +17,7 @@ const Login = () => {
                         <Text style={Styles.label}>Nickname</Text>
                         <TextInput style={Styles.inputBoxText} maxLength={20} />
                     </View>
-                    <View style={Styles.inputBox}>
+                    <View style={[Styles.inputBox, {marginBottom: 45, borderColor: '#1faa00'}]}>
                         <Text style={Styles.label}>Password</Text>
                         <TextInput style={Styles.inputBoxText} secureTextEntry={true} maxLength={20} />
                     </View>
