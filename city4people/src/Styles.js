@@ -52,9 +52,9 @@ Styles = StyleSheet.create({
         margin: '5%',
         backgroundColor: 'white',
         borderRadius: 25,
-        left: '10%',
+        left: '5%',
         height: 150,
-        width: '70%',
+        width: '80%',
     },
 
     elevationGreen: {
