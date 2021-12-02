@@ -22,7 +22,7 @@ export default function Profile(){
             </View>
 
             <ScrollView
-                showsVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={true}
                 style={{
                     marginBottom: 75,
                 }}>
