@@ -5,6 +5,7 @@ import Icon from 'react-native-ionicons';
 import {Styles} from '../Styles';
 import {useParams} from 'react-router';
 import {Link} from 'react-router-native';
+import Navigation from './Navigation';
 
 const ActivityDetail = () => {
     const {id} = useParams();
@@ -125,7 +126,8 @@ const ActivityDetail = () => {
                             justifyContent: 'center',
                             marginBottom: 16,
                         }}>
-                        <TouchableOpacity
+                        <Link
+                            to={'/formular'}
                             activeOpacity={1}
                             style={Styles.outerbutton}>
                             <View>
@@ -137,7 +139,7 @@ const ActivityDetail = () => {
                                     Participate
                                 </Text>
                             </View>
-                        </TouchableOpacity>
+                        </Link>
                         <Link
                             to={'/activity'}
                             activeOpacity={1}
@@ -155,6 +157,7 @@ const ActivityDetail = () => {
                     </View>
                 </View>
             </ScrollView>
+            <Navigation activeTab={'activity'}></Navigation>
         </>
     );
 };

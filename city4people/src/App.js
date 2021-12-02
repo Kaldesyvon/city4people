@@ -15,6 +15,7 @@ import TaskDetail from './components/TaskDetail';
 import ActivityDetail from './components/ActivityDetail';
 import AddTask from './components/AddTask';
 import Activity from './components/Activity';
+import Formular from './components/Formular';
 
 const App = () => {
     return (
@@ -52,6 +53,7 @@ const App = () => {
                 <Route path="/detail" element={<InfoDetail />} />
                 <Route exact path="/" element={<Signin />} />
                 <Route path="/upvotes" element={<Upvotes />} />
+                <Route path="/formular" element={<Formular />} />
             </Routes>
         </NativeRouter>
     );
