@@ -30,8 +30,22 @@ Styles = StyleSheet.create({
 
     subHeading:{
         fontSize: 15,
-        margin: 10
+        marginTop: 10,
+        marginHorizontal: 10
         // marginBottom: 13,
+    },
+
+    subSubHeading:{
+        fontWeight: 'bold',
+        fontSize: 15,
+        marginHorizontal: 10,
+        marginTop: 5,
+    },
+
+    subSubSubHeading:{
+        fontSize: 15,
+        marginHorizontal: 5,
+        marginTop: 5,
     },
 
     Upvotecard: {

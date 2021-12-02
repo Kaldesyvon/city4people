@@ -34,24 +34,43 @@ const Upvotes = () => {
 
 
             <ScrollView
-                showsVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={true}
                 style={{
                     marginBottom: 75,
                 }}>
                 {taskList.map(upvotes => {
                     return(
-                        <View key={upvotes.id} style={[Styles.Upvotecard, upvotes.priority == 3 ? Styles.elevationRed : Styles.elevationGreen]}>
+                        <View key={upvotes.id} style={[Styles.Upvotecard, upvotes.state == "expired" ? Styles.elevationRed : Styles.elevationGreen]}>
                             <Text
                                 style = {Styles.heading}>
                                 {upvotes.title}
                             </Text>
+
                             <Text
                                 style = {Styles.subHeading}>
                                 Upvoted {upvotes.published}
                             </Text>
+
+                            <View style = {{flexDirection: 'row'}}>
+                                <Text
+                                    style = {Styles.subSubHeading}>
+                                    Status:
+                                </Text>
+                                <Text
+                                    style = {Styles.subSubSubHeading}>
+                                    {upvotes.state}
+                                </Text>
+                            </View>
+
                             <View style = {Styles.upvoteLocation}>
-                                <Icon name="pin" color="black" />
-                                <Text>{upvotes.location}</Text>
+                                <Icon 
+                                    name="pin" 
+                                    color="black" 
+                                />
+                                <Text 
+                                    style= {Styles.subSubSubHeading}>
+                                    {upvotes.location}
+                                </Text>
                             </View>
                         </View>
                     )
