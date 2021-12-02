@@ -1,12 +1,12 @@
-import {Image, ScrollView, Text, View} from "react-native";
-import React, {useEffect, useState} from "react";
-import {Styles} from "../Styles";
-import {Link, useParams} from "react-router-native";
-import getAxios from "../api/getAxios";
-import Icon from "react-native-ionicons";
+import {Image, ScrollView, Text, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {Styles} from '../Styles';
+import {Link, useParams} from 'react-router-native';
+import getAxios from '../api/getAxios';
+import Icon from 'react-native-ionicons';
 
-export default function InfoDetail () {
-    let { id } = useParams()
+export default function InfoDetail() {
+    let {id} = useParams();
 
     const [info, setInfo] = useState();
 
@@ -22,7 +22,9 @@ export default function InfoDetail () {
 
     if (!info) {
         return (
-            <View><Text>404 Not found!</Text></View>
+            <View>
+                <Text>404 Not found!</Text>
+            </View>
         );
     }
 
@@ -75,7 +77,12 @@ export default function InfoDetail () {
                         justifyContent: 'center',
                         marginBottom: 16,
                     }}>
-                    <Link to={"/info"} style={[Styles.outerbutton, {flex:1, marginHorizontal:15}]}>
+                    <Link
+                        to={'/info'}
+                        style={[
+                            Styles.outerbutton,
+                            {flex: 1, marginHorizontal: 15},
+                        ]}>
                         <View style={Styles.innerButton}>
                             <Text
                                 style={{
@@ -84,30 +91,29 @@ export default function InfoDetail () {
                                 }}>
                                 Back
                             </Text>
-                            <Icon
-                                name="arrow-back"
-                                size={20}
-                                color="white"/>
+                            <Icon name="arrow-back" size={20} color="white" />
                         </View>
                     </Link>
-                    <Link to={"/map/"+ (info.id === 0 ? "papers" : "metals")} style={[Styles.outerbutton, {flex:1, marginHorizontal:15}]}>
+                    <Link
+                        to={'/map/' + (info.id === 0 ? 'papers' : 'metals')}
+                        style={[
+                            Styles.outerbutton,
+                            {flex: 1, marginHorizontal: 15},
+                        ]}>
                         <View style={Styles.innerButton}>
                             <Text
                                 style={{
                                     fontSize: 16,
                                     color: 'white',
-                                    marginRight:5
+                                    marginRight: 5,
                                 }}>
                                 Find on map
                             </Text>
-                            <Icon
-                                name="pin"
-                                size={20}
-                                color="white"/>
+                            <Icon name="pin" size={20} color="white" />
                         </View>
                     </Link>
                 </View>
             </View>
         </ScrollView>
     );
-};
+}

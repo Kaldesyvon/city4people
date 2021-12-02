@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import {View, Text, TouchableOpacity, Pressable, Alert} from 'react-native';
+import {TextInput} from 'react-native';
 import BouncyCheckBox from 'react-native-bouncy-checkbox';
 
 import {Styles} from '../Styles';
@@ -71,13 +71,14 @@ export default function Formular() {
                                     <Text style={{color: 'white'}}>Back</Text>
                                 </View>
                             </Link>
-                            <TouchableOpacity
+                            <Pressable
+                                onPress={() => Alert.alert('Registration sent successfully')}
                                 style={[
                                     Styles.outerbutton,
                                     Styles.marginButton,
                                 ]}>
                                 <Text style={{color: 'white'}}>Send</Text>
-                            </TouchableOpacity>
+                            </Pressable>
                         </View>
                     </View>
                 </View>
@@ -86,17 +87,3 @@ export default function Formular() {
         </>
     );
 }
-
-const styles = StyleSheet.create({
-    form: {
-        alignSelf: 'center',
-        width: '90%',
-        marginTop: '10%',
-    },
-    input: {
-        color: '#00DB16',
-    },
-    field: {
-        paddingBottom: '5%',
-    },
-});

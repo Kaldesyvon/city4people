@@ -45,7 +45,11 @@ const AddTask = () => {
                             />
                         </View>
 
-                        <View style={[Styles.inputBox, {marginBottom: 45, borderColor: '#1faa00'}]}>
+                        <View
+                            style={[
+                                Styles.inputBox,
+                                {marginBottom: 45, borderColor: '#1faa00'},
+                            ]}>
                             <Text style={Styles.label}>Location</Text>
                             <TextInput
                                 style={Styles.inputBoxText}
@@ -53,7 +57,11 @@ const AddTask = () => {
                                 onChangeText={text => setLocation(text)}
                             />
                         </View>
-                        <View style={[Styles.inputBox, {marginBottom: 45, borderColor: '#1faa00'}]}>
+                        <View
+                            style={[
+                                Styles.inputBox,
+                                {marginBottom: 45, borderColor: '#1faa00'},
+                            ]}>
                             <Text style={Styles.label}>Details</Text>
                             <TextInput
                                 style={Styles.inputBoxText}

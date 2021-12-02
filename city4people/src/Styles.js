@@ -31,18 +31,18 @@ Styles = StyleSheet.create({
     subHeading: {
         fontSize: 15,
         marginTop: 10,
-        marginHorizontal: 10
+        marginHorizontal: 10,
         // marginBottom: 13,
     },
 
-    subSubHeading:{
+    subSubHeading: {
         fontWeight: 'bold',
         fontSize: 15,
         marginHorizontal: 10,
         marginTop: 5,
     },
 
-    subSubSubHeading:{
+    subSubSubHeading: {
         fontSize: 15,
         marginHorizontal: 5,
         marginTop: 5,
@@ -55,7 +55,6 @@ Styles = StyleSheet.create({
         left: '10%',
         height: 150,
         width: '70%',
-        // marginBottom: '20%',
     },
 
     elevationGreen: {
@@ -95,7 +94,6 @@ Styles = StyleSheet.create({
         margin: 10,
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        // alignItems: 'center',
     },
 
     upvotesTitle: {
@@ -121,7 +119,7 @@ Styles = StyleSheet.create({
 
     bottomNav: {
         flex: 1,
-        backgroundColor: '#EEEEEE'
+        backgroundColor: '#EEEEEE',
     },
 
     imageCircle: {
@@ -143,7 +141,7 @@ Styles = StyleSheet.create({
         borderRadius: 50,
         backgroundColor: 'white',
         top: '1%',
-        left: '25%'
+        left: '25%',
     },
 
     buttonContainerGreen: {
@@ -155,7 +153,7 @@ Styles = StyleSheet.create({
         backgroundColor: 'white',
         // top: '20%',
         left: '9%',
-        margin: 15
+        margin: 15,
     },
 
     dropDownContainerGreen: {
@@ -167,11 +165,11 @@ Styles = StyleSheet.create({
         backgroundColor: 'white',
         // top: '40%',
         left: '5%',
-        margin: 15
+        margin: 15,
     },
 
     dropDownStyle: {
-        fontSize: 30
+        fontSize: 30,
     },
 
     Button_box_white: {
@@ -359,9 +357,7 @@ Styles = StyleSheet.create({
         bottom: 0,
         height: '10%',
         width: '100%',
-        // justifyContent: 'space-evenly',
         backgroundColor: 'white',
-        // alignSelf: 'center'
     },
     navButton: {
         justifyContent: 'center',

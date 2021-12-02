@@ -16,7 +16,9 @@ function Navigation(props) {
             <Link style={Styles.navButton} to={'/home'}>
                 <View style={{alignItems: 'center'}}>
                     <Icon name={'list'} color={getActiveTab('home')} />
-                    <Text style={{color: `${getActiveTab('home')}`}}>Issues</Text>
+                    <Text style={{color: `${getActiveTab('home')}`}}>
+                        Issues
+                    </Text>
                 </View>
             </Link>
             <Link style={Styles.navButton} to={'/activity'}>

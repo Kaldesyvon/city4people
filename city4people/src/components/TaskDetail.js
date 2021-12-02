@@ -1,4 +1,4 @@
-import {Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {Text, View, Image, ScrollView, Pressable} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import getAxios from '../api/getAxios';
 import {Link} from 'react-router-native';
@@ -11,6 +11,7 @@ const TaskDetail = () => {
     const {id} = useParams();
 
     const [task, setTask] = useState();
+    const [upvotes, setUpvotes] = useState();
 
     const fetchTask = async () => {
         const newId = id.slice(1);
@@ -29,6 +30,11 @@ const TaskDetail = () => {
 
     if (!task) {
         return null;
+    }
+
+    function upvote() {
+        console.debug(upvotes);
+        return () => setUpvotes(task.reported + 1);
     }
 
     return (
@@ -91,7 +97,7 @@ const TaskDetail = () => {
                             color: 'black',
                             fontSize: 16,
                         }}>
-                        Reported: {task.reported}x
+                        Reported: {!upvotes ? task.reported : upvotes}x
                     </Text>
                     <View
                         style={{
@@ -136,8 +142,8 @@ const TaskDetail = () => {
                             justifyContent: 'center',
                             marginBottom: 16,
                         }}>
-                        <TouchableOpacity
-                            activeOpacity={1}
+                        <Pressable
+                            onPress={upvote()}
                             style={Styles.outerbutton}>
                             <View>
                                 <Text
@@ -145,10 +151,10 @@ const TaskDetail = () => {
                                         fontSize: 16,
                                         color: 'white',
                                     }}>
-                                    Participate
+                                    Upvote
                                 </Text>
                             </View>
-                        </TouchableOpacity>
+                        </Pressable>
                         <Link
                             to={'/home'}
                             activeOpacity={1}
