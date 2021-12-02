@@ -7,13 +7,13 @@ import {Styles} from '../Styles';
 import Navigation from './Navigation';
 
 export default function Map(props) {
-    let material = '';
+    let location = '';
 
     const [markers, setMarkers] = useState([]);
 
     const fetchMarkers = async () => {
         const response = await getAxios()
-            .get(`/${material}`)
+            .get(`/${location}`)
             .catch(error => console.error(error));
 
         setMarkers(response.data);
@@ -21,10 +21,10 @@ export default function Map(props) {
 
     useEffect(() => {
         if (JSON.stringify(props) !== '{}') {
-            material = props.material;
+            location = props.material;
             fetchMarkers();
         }
-    }, [material]);
+    }, [location]);
 
     return (
         <View style={{height: '100%'}}>

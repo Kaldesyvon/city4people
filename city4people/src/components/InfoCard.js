@@ -17,7 +17,8 @@ export default function InfoCard(props){
                         <Icon
                             name="arrow-forward"
                             size={20}
-                            color="white"/></View>
+                            color="white"/>
+                    </View>
                 </Link>
             </View>
 

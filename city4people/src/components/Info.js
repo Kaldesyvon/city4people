@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
-import InfoCard from './InfoCard';
-import getAxios from '../api/getAxios';
-import Navigation from './Navigation';
-import {Styles} from '../Styles';
+import {ScrollView} from 'react-native';
+import InfoCard from "./InfoCard";
+import getAxios from "../api/getAxios";
+import Navigation from "./Navigation";
+import {Styles} from "../Styles";
+
+export default function Info(){
 
 export default function Info() {
     const [infoList, setInfoList] = useState([]);
 
     const fetchTaskList = async () => {
         const response = await getAxios().get('infos');
-
         setInfoList(response.data);
     };
 
@@ -27,18 +28,14 @@ export default function Info() {
                     flex: 0,
                     marginBottom: 75,
                 }}>
-                {infoList.map(info => (
+                {infoList.map(info =>
+
                     <InfoCard
-                        key={info.id}
-                        style={{flex: 1}}
-                        id={info.id}
-                        published={info.published}
-                        title={info.title}
-                        detail={info.detail}
-                        src={info.photo}
-                    />
-                ))}
-                {infoList.map(info => console.log(info.photo))}
+                            key={info.id}
+                            style={{flex: 1}}
+                            id={info.id}
+                            title={info.title}
+                            src={info.photo}/>)}
             </ScrollView>
             <Navigation style={Styles.bottomNav} activeTab="info"></Navigation>
         </>

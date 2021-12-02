@@ -15,15 +15,15 @@ function Navigation(props) {
         <View style={Styles.navBar}>
             <Link style={Styles.navButton} to={'/home'}>
                 <View style={{alignItems: 'center'}}>
-                    <Icon name={'home'} color={getActiveTab('home')} />
-                    <Text style={{color: `${getActiveTab('home')}`}}>Home</Text>
+                    <Icon name={'list'} color={getActiveTab('home')} />
+                    <Text style={{color: `${getActiveTab('home')}`}}>Issues</Text>
                 </View>
             </Link>
             <Link style={Styles.navButton} to={'/activity'}>
                 <View style={{alignItems: 'center'}}>
                     <Icon name={'flag'} color={getActiveTab('activity')} />
                     <Text style={{color: `${getActiveTab('activity')}`}}>
-                        Works
+                        Events
                     </Text>
                 </View>
             </Link>

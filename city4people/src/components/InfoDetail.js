@@ -32,7 +32,7 @@ export default function InfoDetail () {
             style={{marginBottom: 75, display: 'flex'}}>
             <View style={Styles.detailCointainer}>
                 <Text style={{marginLeft: 16, marginTop: 16, fontSize: 12}}>
-                    Published {info.published}
+                    {info.published}
                 </Text>
                 <Text
                     style={{
@@ -75,7 +75,7 @@ export default function InfoDetail () {
                         justifyContent: 'center',
                         marginBottom: 16,
                     }}>
-                    <Link to={"/info"} style={Styles.outerbutton}>
+                    <Link to={"/info"} style={[Styles.outerbutton, {flex:1, marginHorizontal:15}]}>
                         <View style={Styles.innerButton}>
                             <Text
                                 style={{
@@ -86,6 +86,22 @@ export default function InfoDetail () {
                             </Text>
                             <Icon
                                 name="arrow-back"
+                                size={20}
+                                color="white"/>
+                        </View>
+                    </Link>
+                    <Link to={"/map/"+ (info.id === 0 ? "papers" : "metals")} style={[Styles.outerbutton, {flex:1, marginHorizontal:15}]}>
+                        <View style={Styles.innerButton}>
+                            <Text
+                                style={{
+                                    fontSize: 16,
+                                    color: 'white',
+                                    marginRight:5
+                                }}>
+                                Find on map
+                            </Text>
+                            <Icon
+                                name="pin"
                                 size={20}
                                 color="white"/>
                         </View>

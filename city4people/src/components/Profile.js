@@ -1,9 +1,9 @@
-import {Text, View, TouchableOpacity, Image, ScrollView} from 'react-native';
-import React from 'react';
-import {Styles} from '../Styles';
-import Navigation from './Navigation';
-import SelectDropdown from 'react-native-select-dropdown';
-import {Link} from 'react-router-native';
+import {Text, View, TouchableOpacity, Image, ScrollView} from "react-native";
+import React from "react";
+import {Styles} from "../Styles";
+import Navigation from "./Navigation";
+import SelectDropdown from 'react-native-select-dropdown'
+import { Link } from "react-router-native";
 
 const countries = ['English', 'Slovak', 'German'];
 
@@ -15,7 +15,7 @@ export default function Profile() {
             </View>
 
             <ScrollView
-                showsVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={true}
                 style={{
                     marginBottom: 75,
                 }}>
@@ -31,17 +31,12 @@ export default function Profile() {
                     <Text style={Styles.rep_box}>Reputation: 2</Text>
                 </View>
 
-                <Link style={Styles.buttonContainerGreen} to={'/upvotes'}>
-                    <Text style={Styles.Button_box_green}>Upvotes</Text>
-                </Link>
-
                 <SelectDropdown
-                    defaultButtonText="Language"
-                    buttonStyle={Styles.dropDownContainerGreen}
-                    buttonTextStyle={Styles.Button_box_green}
-                    dropdownStyle={Styles.Button_box_green}
-                    // rowStyle = {Styles.Button_box_green}
-                    rowTextStyle={Styles.Button_box_green}
+                    defaultButtonText = 'Language'
+                    buttonStyle = {Styles.dropDownContainerGreen}
+                    buttonTextStyle = {Styles.Button_box_green}
+                    rowTextStyle = {Styles.dropDownStyle}
+                    
                     data={countries}
                     onSelect={(selectedItem, index) => {}}
                     buttonTextAfterSelection={(selectedItem, index) => {
@@ -52,7 +47,16 @@ export default function Profile() {
                     }}
                 />
 
-                <TouchableOpacity style={Styles.buttonContainerGreen}>
+
+                <Link 
+                    style={Styles.buttonContainerGreen}
+                    to={'/upvotes'}>
+                    <Text style={Styles.Button_box_green}>Upvotes</Text>
+                </Link>
+
+
+                <TouchableOpacity
+                    style={Styles.buttonContainerGreen}>
                     <Text style={Styles.Button_box_green}>About</Text>
                 </TouchableOpacity>
             </ScrollView>
