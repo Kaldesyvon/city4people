@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
+import {ScrollView} from 'react-native';
 import InfoCard from "./InfoCard";
 import getAxios from "../api/getAxios";
 import Navigation from "./Navigation";
@@ -11,7 +11,6 @@ export default function Info(){
 
     const fetchTaskList = async () => {
         const response = await getAxios().get('infos');
-
         setInfoList(response.data);
     };
 
@@ -29,13 +28,12 @@ export default function Info(){
                 }}>
                 {infoList.map(info =>
 
-                    <InfoCard style={{flex: 1}}
-                              id={info.id}
-                              published={info.published}
-                              title={info.title}
-                              detail={info.detail}
-                              src={info.photo}/>)}
-                {infoList.map(info => console.log(info.photo))}
+                    <InfoCard
+                            key={info.id}
+                            style={{flex: 1}}
+                            id={info.id}
+                            title={info.title}
+                            src={info.photo}/>)}
             </ScrollView>
             <Navigation
                 style = {Styles.bottomNav}
