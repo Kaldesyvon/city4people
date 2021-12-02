@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {ScrollView} from 'react-native';
-import InfoCard from "./InfoCard";
-import getAxios from "../api/getAxios";
-import Navigation from "./Navigation";
-import {Styles} from "../Styles";
-
-export default function Info(){
+import InfoCard from './InfoCard';
+import getAxios from '../api/getAxios';
+import Navigation from './Navigation';
+import {Styles} from '../Styles';
 
 export default function Info() {
     const [infoList, setInfoList] = useState([]);
@@ -28,14 +26,15 @@ export default function Info() {
                     flex: 0,
                     marginBottom: 75,
                 }}>
-                {infoList.map(info =>
-
+                {infoList.map(info => (
                     <InfoCard
-                            key={info.id}
-                            style={{flex: 1}}
-                            id={info.id}
-                            title={info.title}
-                            src={info.photo}/>)}
+                        key={info.id}
+                        style={{flex: 1}}
+                        id={info.id}
+                        title={info.title}
+                        src={info.photo}
+                    />
+                ))}
             </ScrollView>
             <Navigation style={Styles.bottomNav} activeTab="info"></Navigation>
         </>
