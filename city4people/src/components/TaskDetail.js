@@ -1,4 +1,4 @@
-import {Text, View, Image, TouchableOpacity, ScrollView, Pressable} from 'react-native';
+import {Text, View, Image, ScrollView, Pressable} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import getAxios from '../api/getAxios';
 import {Link} from 'react-router-native';
@@ -32,11 +32,10 @@ const TaskDetail = () => {
         return null;
     }
 
-    function upvote(){
-        console.debug(upvotes)
-        return () => setUpvotes(task.reported+1)
+    function upvote() {
+        console.debug(upvotes);
+        return () => setUpvotes(task.reported + 1);
     }
-
 
     return (
         <>
@@ -98,7 +97,7 @@ const TaskDetail = () => {
                             color: 'black',
                             fontSize: 16,
                         }}>
-                        Reported: {!upvotes?task.reported:upvotes}x
+                        Reported: {!upvotes ? task.reported : upvotes}x
                     </Text>
                     <View
                         style={{

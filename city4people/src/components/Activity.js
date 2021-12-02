@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Image, Text, ScrollView, TouchableOpacity} from 'react-native';
+import {View, Image, Text, ScrollView} from 'react-native';
 import {Link} from 'react-router-native';
 import getAxios from '../api/getAxios';
 import Icon from 'react-native-ionicons';

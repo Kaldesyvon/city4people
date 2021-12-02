@@ -1,4 +1,4 @@
-import {Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {Text, View, Image, ScrollView} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import getAxios from '../api/getAxios';
 import Icon from 'react-native-ionicons';
