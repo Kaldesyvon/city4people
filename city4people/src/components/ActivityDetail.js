@@ -3,9 +3,8 @@ import React, {useState, useEffect} from 'react';
 import getAxios from '../api/getAxios';
 import Icon from 'react-native-ionicons';
 import {Styles} from '../Styles';
-import {black} from 'react-native-paper/lib/typescript/styles/colors';
 import {useParams} from 'react-router';
-import Navigation from './Navigation';
+import {Link} from 'react-router-native';
 
 const ActivityDetail = () => {
     const {id} = useParams();
@@ -29,6 +28,7 @@ const ActivityDetail = () => {
     return (
         <>
             <ScrollView
+                justifyContent="center"
                 alignItems="center"
                 style={{marginBottom: 75, display: 'flex'}}>
                 <View elevation={5} style={Styles.detailCointainer}>
@@ -125,22 +125,9 @@ const ActivityDetail = () => {
                             justifyContent: 'center',
                             marginBottom: 16,
                         }}>
-                        {/* <TouchableOpacity
-                            activeOpacity={1}
-                            style={Styles.outerbutton}>
-                            <View>
-                                <Text
-                                    style={{
-                                        fontSize: 16,
-                                        color: 'white',
-                                    }}>
-                                    Report
-                                </Text>
-                            </View>
-                        </TouchableOpacity> */}
                         <TouchableOpacity
                             activeOpacity={1}
-                            style={[Styles.outerbutton, Styles.marginButton]}>
+                            style={Styles.outerbutton}>
                             <View>
                                 <Text
                                     style={{
@@ -151,10 +138,23 @@ const ActivityDetail = () => {
                                 </Text>
                             </View>
                         </TouchableOpacity>
+                        <Link
+                            to={'/activity'}
+                            activeOpacity={1}
+                            style={[Styles.outerbutton, Styles.marginButton]}>
+                            <View>
+                                <Text
+                                    style={{
+                                        fontSize: 16,
+                                        color: 'white',
+                                    }}>
+                                    Back
+                                </Text>
+                            </View>
+                        </Link>
                     </View>
                 </View>
             </ScrollView>
-            <Navigation activeTab={'home'}></Navigation>
         </>
     );
 };

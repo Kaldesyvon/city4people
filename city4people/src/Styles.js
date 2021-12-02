@@ -24,13 +24,13 @@ Styles = StyleSheet.create({
     heading: {
         fontSize: 18,
         fontWeight: '600',
-        margin: 10
+        margin: 10,
         // marginBottom: 13,
     },
 
-    subHeading:{
+    subHeading: {
         fontSize: 15,
-        margin: 10
+        margin: 10,
         // marginBottom: 13,
     },
 
@@ -40,7 +40,7 @@ Styles = StyleSheet.create({
         borderRadius: 25,
         left: '10%',
         height: 150,
-        width: '70%'
+        width: '70%',
         // marginBottom: '20%',
     },
 
@@ -59,8 +59,7 @@ Styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 25,
         borderColor: 'red',
-        borderWidth: 2
-
+        borderWidth: 2,
     },
 
     upvoteCardGreen: {
@@ -92,20 +91,18 @@ Styles = StyleSheet.create({
         fontSize: 20,
     },
 
-
     topBox: {
         width: '100%',
         height: 70,
         backgroundColor: 'white',
         flexDirection: 'row',
-
     },
 
     topText: {
-        color: "#00DB16",
+        color: '#00DB16',
         left: '140%',
 
-        fontSize: 50
+        fontSize: 50,
     },
 
     bottomNav: {
@@ -120,7 +117,7 @@ Styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         left: '30%',
-        top: '10%'
+        top: '10%',
     },
 
     buttonContainerWhite: {
@@ -131,7 +128,7 @@ Styles = StyleSheet.create({
         borderRadius: 50,
         backgroundColor: 'white',
         top: '12%',
-        left: '32%'
+        left: '32%',
     },
 
     buttonContainerGreen: {
@@ -143,7 +140,7 @@ Styles = StyleSheet.create({
         backgroundColor: '#EEEEEE',
         top: '20%',
         left: '19%',
-        margin: 15
+        margin: 15,
     },
 
     dropDownContainerGreen: {
@@ -155,7 +152,7 @@ Styles = StyleSheet.create({
         backgroundColor: '#EEEEEE',
         top: '40%',
         left: '9%',
-        margin: 15
+        margin: 15,
     },
 
     Button_box_white: {
@@ -182,7 +179,7 @@ Styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         margin: 30,
-        flex: 1
+        flex: 1,
     },
 
     profile_image: {
@@ -335,7 +332,7 @@ Styles = StyleSheet.create({
         width: 340,
     },
     marginButton: {
-        // marginLeft: '15%',
+        marginLeft: '15%',
     },
     navBar: {
         flexDirection: 'row',
@@ -352,6 +349,6 @@ Styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'white',
         width: '20%',
-        height: '100%'
+        height: '100%',
     },
 });
