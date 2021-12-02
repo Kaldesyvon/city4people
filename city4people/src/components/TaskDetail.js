@@ -1,11 +1,11 @@
 import {Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import getAxios from '../api/getAxios';
+import {Link} from 'react-router-native';
 import Icon from 'react-native-ionicons';
 import {Styles} from '../Styles';
-import {black} from 'react-native-paper/lib/typescript/styles/colors';
 import {useParams} from 'react-router';
-import Navigation from './Navigation';
+import data from '../database/db.json';
 
 const TaskDetail = () => {
     const {id} = useParams();
@@ -14,8 +14,13 @@ const TaskDetail = () => {
 
     const fetchTask = async () => {
         const newId = id.slice(1);
-        const response = await getAxios().get(`task/${newId}`);
-        setTask(response.data);
+        if (parseInt(newId) < 2) {
+            const response = await getAxios().get(`task/${newId}`);
+            setTask(response.data);
+        } else {
+            let newData = data.tasks[parseInt(newId) - 2];
+            setTask(newData);
+        }
     };
 
     useEffect(() => {
@@ -30,8 +35,14 @@ const TaskDetail = () => {
         <>
             <ScrollView
                 alignItems="center"
-                style={{marginBottom: 75, display: 'flex'}}>
-                <View elevation={5} style={Styles.detailCointainer}>
+                justifyContent="center"
+                style={{
+                    marginBottom: 75,
+                    display: 'flex',
+                }}>
+                <View
+                    elevation={5}
+                    style={[Styles.detailCointainer, {alignSelf: 'center'}]}>
                     <Text style={{marginLeft: 16, marginTop: 16, fontSize: 12}}>
                         Published {task.published}
                     </Text>
@@ -125,22 +136,9 @@ const TaskDetail = () => {
                             justifyContent: 'center',
                             marginBottom: 16,
                         }}>
-                        {/* <TouchableOpacity
-                            activeOpacity={1}
-                            style={Styles.outerbutton}>
-                            <View>
-                                <Text
-                                    style={{
-                                        fontSize: 16,
-                                        color: 'white',
-                                    }}>
-                                    Report
-                                </Text>
-                            </View>
-                        </TouchableOpacity> */}
                         <TouchableOpacity
                             activeOpacity={1}
-                            style={[Styles.outerbutton, Styles.marginButton]}>
+                            style={Styles.outerbutton}>
                             <View>
                                 <Text
                                     style={{
@@ -151,10 +149,23 @@ const TaskDetail = () => {
                                 </Text>
                             </View>
                         </TouchableOpacity>
+                        <Link
+                            to={'/home'}
+                            activeOpacity={1}
+                            style={[Styles.outerbutton, Styles.marginButton]}>
+                            <View>
+                                <Text
+                                    style={{
+                                        fontSize: 16,
+                                        color: 'white',
+                                    }}>
+                                    Back
+                                </Text>
+                            </View>
+                        </Link>
                     </View>
                 </View>
             </ScrollView>
-            <Navigation activeTab={'home'}></Navigation>
         </>
     );
 };

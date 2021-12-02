@@ -1,18 +1,23 @@
 import React, {useEffect, useState} from 'react';
-import {View, Image, Text, ScrollView, TouchableOpacity} from 'react-native';
+import {View, Image, Text, ScrollView} from 'react-native';
 import {Link} from 'react-router-native';
 import getAxios from '../api/getAxios';
 import Icon from 'react-native-ionicons';
 import {Styles} from '../Styles';
 import Navigation from './Navigation';
+import data from '../database/db.json';
 
 const Home = () => {
+    let counter = 0;
     const [taskList, setTaskList] = useState([]);
 
     const fetchTaskList = async () => {
         const response = await getAxios().get('tasks');
-
-        setTaskList(response.data);
+        let newData = response.data;
+        data['tasks'].map(task => {
+            newData.push(task);
+        });
+        setTaskList(newData);
     };
 
     useEffect(() => {
@@ -31,6 +36,7 @@ const Home = () => {
                     marginBottom: 75,
                 }}>
                 {taskList.map(task => {
+                    counter++;
                     return (
                         <View
                             elevation={5}
@@ -127,7 +133,7 @@ const Home = () => {
                 </Link>
             </ScrollView>
             <Link
-                to={'/addtask'}
+                to={`/addtask/:${counter}`}
                 activeOpacity={1}
                 style={{
                     borderWidth: 4,

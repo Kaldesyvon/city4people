@@ -7,6 +7,7 @@ import {Styles} from "../Styles";
 
 export default function Info(){
 
+export default function Info() {
     const [infoList, setInfoList] = useState([]);
 
     const fetchTaskList = async () => {
@@ -18,9 +19,10 @@ export default function Info(){
         fetchTaskList();
     }, []);
 
-    return(
+    return (
         <>
-            <ScrollView style={{
+            <ScrollView
+                style={{
                     backgroundColor: '#EEEEEE',
                     display: 'flex',
                     flex: 0,
@@ -35,10 +37,7 @@ export default function Info(){
                             title={info.title}
                             src={info.photo}/>)}
             </ScrollView>
-            <Navigation
-                style = {Styles.bottomNav}
-                activeTab='info'>
-            </Navigation>
+            <Navigation style={Styles.bottomNav} activeTab="info"></Navigation>
         </>
-    )
+    );
 }

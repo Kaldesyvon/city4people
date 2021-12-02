@@ -5,20 +5,13 @@ import Navigation from "./Navigation";
 import SelectDropdown from 'react-native-select-dropdown'
 import { Link } from "react-router-native";
 
+const countries = ['English', 'Slovak', 'German'];
 
-const countries = ["English", "Slovak", "German"]
-
-export default function Profile(){
+export default function Profile() {
     return (
-
-        <View style = {Styles.bottomNav}>
-
-            <View
-                style = {Styles.topBox}>
-                <Text
-                    style = {Styles.topText}>
-                    Account
-                </Text>
+        <View style={Styles.bottomNav}>
+            <View style={Styles.topBox}>
+                <Text style={Styles.topText}>Account</Text>
             </View>
 
             <ScrollView
@@ -26,12 +19,14 @@ export default function Profile(){
                 style={{
                     marginBottom: 75,
                 }}>
-                <View style = {Styles.imageCircle}>
-                    <Image source={require('../assets/images/man-modified.png')} style={Styles.profile_image}/>
+                <View style={Styles.imageCircle}>
+                    <Image
+                        source={require('../assets/images/man-modified.png')}
+                        style={Styles.profile_image}
+                    />
                 </View>
 
-                <View
-                    style={Styles.buttonContainerWhite}>
+                <View style={Styles.buttonContainerWhite}>
                     <Text style={Styles.Button_box_white}>Janko Hrasko</Text>
                     <Text style={Styles.rep_box}>Reputation: 2</Text>
                 </View>
@@ -45,12 +40,11 @@ export default function Profile(){
                     data={countries}
                     onSelect={(selectedItem, index) => {}}
                     buttonTextAfterSelection={(selectedItem, index) => {
-                        return selectedItem
+                        return selectedItem;
                     }}
                     rowTextForSelection={(item, index) => {
-                        return item
+                        return item;
                     }}
-
                 />
 
 
@@ -67,9 +61,7 @@ export default function Profile(){
                 </TouchableOpacity>
             </ScrollView>
 
-            <Navigation
-                activeTab='profile'>
-            </Navigation>
+            <Navigation activeTab="profile"></Navigation>
         </View>
-    )
+    );
 }

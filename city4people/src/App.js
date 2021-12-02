@@ -26,7 +26,7 @@ const App = () => {
                 <Route path="/navigation" element={<Navigation />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/taskdetail/:id" element={<TaskDetail />} />
-                <Route path="/addtask" element={<AddTask />} />
+                <Route path="/addtask/:id" element={<AddTask />} />
                 <Route path="/activity" element={<Activity />} />
                 <Route
                     path="/activitydetail/:id"
